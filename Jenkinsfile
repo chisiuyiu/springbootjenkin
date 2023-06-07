@@ -23,7 +23,7 @@ pipeline {
 	    stage('Pushing Docker Image to Dockerhub') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dckr_pat_Dj96TFmDxIOj0MjCknKXcLKFFjk') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker_credential') {
                         docker.image("chisiuyiu/springbootbackend:${TAG}").push()
                         docker.image("chisiuyiu/springbootbackend:${TAG}").push("latest")
                     }

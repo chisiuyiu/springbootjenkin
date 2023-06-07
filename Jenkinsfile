@@ -24,8 +24,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dckr_pat_Dj96TFmDxIOj0MjCknKXcLKFFjk') {
-                        docker.image("chisiuyiu/hello-world:${TAG}").push()
-                        docker.image("chisiuyiu/hello-world:${TAG}").push("latest")
+                        docker.image("chisiuyiu/springbootbackend:${TAG}").push()
+                        docker.image("chisiuyiu/springbootbackend:${TAG}").push("latest")
                     }
                 }
             }

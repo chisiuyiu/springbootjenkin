@@ -32,8 +32,8 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh "docker stop hello-world | true"
-                sh "docker rm hello-world | true"
+                sh "docker stop springbootbackend | true"
+                sh "docker rm springbootbackend | true"
                 sh "docker run --name springbootbackend -d -p 8582:8582 chisiuyiu/springbootbackend:${TAG}"
             }
         }

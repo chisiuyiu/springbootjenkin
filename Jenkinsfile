@@ -34,7 +34,7 @@ pipeline {
             steps {
                 sh "docker stop springbootbackend | true"
                 sh "docker rm springbootbackend | true"
-                sh "docker run --name springbootbackend -d -p 8582:8582 chisiuyiu/springbootbackend:${TAG}"
+                sh "docker run --add-host=host.docker.internal:host-gateway --name springbootbackend -d -p 8582:8582 chisiuyiu/springbootbackend:${TAG}"
             }
         }
     }

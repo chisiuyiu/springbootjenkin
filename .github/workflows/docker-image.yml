@@ -22,5 +22,5 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag chisiuyiu/springbootjenkin:$(date +%s)
-    - name: Docker Push
+    - name: Docker Push Hub
       run: docker push ${{secrets.DOCKER}}/springbootjenkin

@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag chisiuyiu/springbootjenkin:$(date +%s)
     - name: Docker Push Hub
-      run: docker push ${{secrets.DOCKER}}/springbootjenkin
+      run: docker push ${{secrets.DOCKER_USER}}/springbootjenkin
